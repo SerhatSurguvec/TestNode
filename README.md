@@ -10,7 +10,6 @@ Database has 2 collections :
   - users ( _id , name )
   - posts ( _id , content , ObjectId() )
   
-
 Routes are :
   {base}/users -> lists users 
   {base}/posts/:UserId -> lists posts associated to the userId
