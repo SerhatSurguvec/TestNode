@@ -35,7 +35,7 @@ app.use('/posts', posts);
 // development only
 if ('development' == app.get('env')) {
   app.use(errorhandler());
-  mongoose.connect('mongodb://localhost:27017/mongo');
+  mongoose.connect('mongodb://serhat:123456@ds033831.mongolab.com:33831/mongo');
 }
 
 //load all files in models dir
