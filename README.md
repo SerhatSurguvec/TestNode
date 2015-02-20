@@ -7,8 +7,8 @@ Mongodb which is connected to this app is located in MongoLab.
 Please Checkout app.js and bin/www for more info.
 
 Routes are :   
- &nbsp{base}/users -> lists users  
- &nbsp{base}/posts/:UserId -> lists posts associated to the userId  
+    {base}/users -> lists users  
+    {base}/posts/:UserId -> lists posts associated to the userId  
 
 Database has 2 collections :
   - users ( _id , name )
