@@ -33,4 +33,7 @@ Database has 2 collections :
   - users ( _id , name )
   - posts ( _id , content , ObjectId() )
   - beacon ( _id , mac_address , name , info )
+
+
+  By Serhat Surguvec
   
