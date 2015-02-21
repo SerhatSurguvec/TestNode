@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var usersSchema = new Schema({
 	name: String
-});
+},{ versionKey: false });
 
 
-mongoose.model('users',usersSchema);
+Users = mongoose.model('Users',usersSchema,'users');

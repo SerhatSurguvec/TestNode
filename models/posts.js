@@ -8,7 +8,7 @@ var postsSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'users'
 	}
-});
+},{ versionKey: false });
 
 
-mongoose.model('posts',postsSchema);
+Posts = mongoose.model('Posts',postsSchema,'posts');
