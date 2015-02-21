@@ -11,12 +11,12 @@ Routes are :
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lists users  
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/posts/:UserId  
  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; lists posts associated with userId (HTTP GET) 
- &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/:MacAddress
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returns beacon with associated with MacAddress (HTTP GET)
+ &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/:MacAddress  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returns beacon with associated with MacAddress (HTTP GET)  
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/list  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lists beacons
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lists beacons  
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/add  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adds a new beacon , Header must be "application/json"
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adds a new beacon , Header must be "application/json"  
 
 Example JSON
 ```json
