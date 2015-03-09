@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
     var obj = new Bulmaca(data);
     obj.save(function (err) {
       if (err) return handleError(err);
-      res.status(400).send("1");
+      res.status(200).send("1");
     });
 
   }
