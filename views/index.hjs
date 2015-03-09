@@ -7,7 +7,7 @@
   <body>
   <p> {{ content }}</p>
 
-	<form action="http://localhost:5000/bulmaca/web" method="GET">
+	<form action="http://sheltered-inlet-4835.herokuapp.com/bulmaca/web" method="GET">
 		Soru:<br>
 		<input type="text" name="Soru" value="">
 		<br>
