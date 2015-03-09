@@ -33,9 +33,38 @@ router.get('/', function(req, res) {
     });
 
   }
+});
 
-  
-  
+router.get('/web', function(req, res) {
+
+  var soru = req.query.Soru;
+  var cevap = req.query.Cevap;
+
+
+  if( soru === undefined || cevap === undefined){
+      res.render('index',{
+      title: "Add",
+      content: ""
+    });
+    // res.status(400).send("0");
+  }else{
+    var data = {
+
+            "Soru": req.query.Soru,
+            "Cevap": req.query.Cevap
+
+    }; 
+
+    var obj = new Bulmaca(data);
+    obj.save(function (err) {
+      if (err) return handleError(err);
+      res.render('index',{
+        title: "Add" ,
+        content: JSON.stringify(data)
+      });
+    });
+
+  }
 });
 
 router.post('/add', function(req, res) {

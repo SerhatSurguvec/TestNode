@@ -5,7 +5,17 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+  <p> {{ content }}</p>
+
+	<form action="http://localhost:5000/bulmaca/web" method="GET">
+		Soru:<br>
+		<input type="text" name="Soru" value="">
+		<br>
+		Cevap:<br>
+		<input type="text" name="Cevap" value="">
+		<br><br>
+		<input type="submit" value="Submit">
+	</form> 
+
   </body>
 </html>
