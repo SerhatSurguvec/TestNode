@@ -9,10 +9,10 @@ Please Checkout app.js and bin/www for more info.
 Routes are :   
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/users  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lists users  
- &nbsp;&nbsp;&nbsp;&nbsp;{base}/posts/:UserId  
- &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; lists posts associated with userId (HTTP GET) 
+ &nbsp;&nbsp;&nbsp;&nbsp;{base}/posts/:UserId   
+ &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; lists posts associated with userId (HTTP GET)  
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/:MacAddress  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returns beacon with associated with MacAddress (HTTP GET)  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returns beacon with associated with MacAddress (HTTP GET)   
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/list  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lists beacons  
  &nbsp;&nbsp;&nbsp;&nbsp;{base}/beacon/add  
@@ -31,8 +31,8 @@ Example JSON
 
 Database has 2 collections :
   - users ( _id , name )  
-  - posts ( _id , content , ObjectId() )  
-  - beacon ( _id , mac_address , name , info )  
+  - posts ( _id , content , ObjectId() )
+  - beacon ( _id , mac_address , name , info )
 
 
   By Serhat Surguvec

@@ -13,6 +13,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var posts = require('./routes/posts');
 var beacon = require('./routes/beacon');
+var bulmaca = require('./routes/bulmaca');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/posts', posts);
 app.use('/beacon', beacon);
+app.use('/bulmaca', bulmaca);
 
 // development only
 if ('development' == app.get('env')) {

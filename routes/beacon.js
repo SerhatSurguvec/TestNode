@@ -27,7 +27,7 @@ router.post('/add', function(req, res) {
     var obj = new Beacon(req.body);
     obj.save(function (err) {
   		if (err) return handleError(err);
-  		res.send("inserted");
+  		res.send("inserted"+mac_address);
 	})
 
 });
