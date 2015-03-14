@@ -13,7 +13,7 @@ router.get('/list', function(req, res) {
 router.get('/:MacAddress', function(req, res) {
 
   if(require('getmac').isMac(req.params.MacAddress)){
-      var query = Beacon.find({ mac_address: req.params.MacAddress}).select('-_id');
+      var query = Beacon.findOne({ mac_address: req.params.MacAddress}).select('-_id');
       query.exec(function (err,beacon){
         if (err) res.send("0");
         res.send(beacon);
