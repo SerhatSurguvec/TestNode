@@ -10,33 +10,32 @@ router.get('/list', function(req, res) {
   });
 });
 
-router.get('/:MacAddress', function(req, res) {
-
-  if(require('getmac').isMac(req.params.MacAddress)){
-      var query = Beacon.findOne({ mac_address: req.params.MacAddress}).select('-_id');
-      query.exec(function (err,beacon){
-        if (err) res.send("0");
-        res.send(beacon);
-      });
-    }
-  });
-
 router.post('/add', function(req, res) {
 
-    var mac_address = req.body.mac_address;
-    var name = req.body.name;
-    var info = req.body.info;
+    var obj = new Beacon(req.body);
 
-    if ( require('getmac').isMac(mac_address) ) {
-      var obj = new Beacon(req.body);
-        obj.save(function (err) {
-          if (err) res.send("0");
-          res.send("1");
-        });
-    } else{
-      res.send("0");
-    }   
+    obj.save(function (err) {
+    if (err) res.send("0");
+      res.send("1");
+    });
+
+
 });
+
+router.post('/get', function(req, res) {
+    var query = Beacon.findOne({ uuid: req.body.uuid , major: req.body.major  , minor: req.body.minor }).select('-_id');
+      query.exec(function (err,beacon){
+        if (err) res.send("0");
+
+        if(beacon != null){
+          res.send(beacon);
+        }else{
+          res.send("0");
+        }
+        
+      });
+    }   
+);
 
 
 module.exports = router;

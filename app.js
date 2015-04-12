@@ -6,14 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var errorhandler = require('errorhandler')
 var mongoose = require('mongoose');
- var fs = require('fs');
-
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var posts = require('./routes/posts');
-var beacon = require('./routes/beacon');
-var bulmaca = require('./routes/bulmaca');
+var fs = require('fs');
 
 var app = express();
 
@@ -29,6 +22,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
+var posts = require('./routes/posts');
+var beacon = require('./routes/beacon');
+var bulmaca = require('./routes/bulmaca');
+
 
 app.use('/', routes);
 app.use('/users', users);
