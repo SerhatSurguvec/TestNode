@@ -25,7 +25,7 @@ router.post('/add', function(req, res) {
 router.post('/get', function(req, res) {
     var query = Beacon.findOne({ uuid: req.body.uuid , major: req.body.major  , minor: req.body.minor }).select('-_id');
       query.exec(function (err,beacon){
-        if (err) res.send("0");
+        if (err) res.send("0" + err);
 
         if(beacon != null){
           res.send(beacon);

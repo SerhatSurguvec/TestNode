@@ -4,7 +4,11 @@ var Schema = mongoose.Schema;
 var beaconSchema = new Schema({
 	uuid: String,
 	name: String,
-	info: String,
+	info: {
+		image : String,
+		video : String,
+		text : String
+	},
 	major: String,
 	minor: String
 },{ versionKey: false });
