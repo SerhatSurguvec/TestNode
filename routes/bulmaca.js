@@ -2,10 +2,17 @@ var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
 
-router.get('/list', function(req, res) {
+router.get('/list' ,function(req, res) {
+
+
   var query = Bulmaca.find({}).select('-_id');
   query.exec(function (err,bulmaca){
   	if (err) return handleError(err);
+
+    // Website you wish to allow to connect
+    //res.setHeader('Access-Control-Allow-Origin', 'http://fiddle.jshell.net');
+    // Request methods you wish to allow
+    //res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   	res.send(bulmaca);
   });
 });

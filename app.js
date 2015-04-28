@@ -8,6 +8,7 @@ var errorhandler = require('errorhandler')
 var mongoose = require('mongoose');
 var fs = require('fs');
 
+
 var app = express();
 
 // view engine setup
@@ -30,6 +31,12 @@ var posts = require('./routes/posts');
 var beacon = require('./routes/beacon');
 var bulmaca = require('./routes/bulmaca');
 
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use('/', routes);
 app.use('/users', users);
