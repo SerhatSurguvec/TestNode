@@ -22,6 +22,14 @@ router.post('/add', function(req, res) {
 
 });
 
+router.post('/addScanningData', function(req, res) {
+    res.send(req.body)
+});
+
+router.get('/addScanningDatas/:data', function(req, res) {
+    res.send(req.params.data)
+});
+
 router.post('/get', function(req, res) {
     var query = Beacon.findOne({ uuid: req.body.uuid , major: req.body.major  , minor: req.body.minor }).select('-_id');
       query.exec(function (err,beacon){
