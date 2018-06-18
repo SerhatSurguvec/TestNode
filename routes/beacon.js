@@ -23,7 +23,12 @@ router.post('/add', function(req, res) {
 });
 
 router.post('/addScanningData', function(req, res) {
-    res.send(req.body)
+    var obj = new BeaconData(req.body);
+
+    obj.save(function (err) {
+    if (err) res.send("0");
+      res.send("1");
+    });
 });
 
 router.get('/addScanningDatas/:data', function(req, res) {
